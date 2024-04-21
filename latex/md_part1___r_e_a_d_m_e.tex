@@ -1,0 +1,66 @@
+\chapter{Final Project}
+\hypertarget{md_part1___r_e_a_d_m_e}{}\label{md_part1___r_e_a_d_m_e}\index{Final Project@{Final Project}}
+\label{md_part1___r_e_a_d_m_e_autotoc_md5}%
+\Hypertarget{md_part1___r_e_a_d_m_e_autotoc_md5}%
+ This is it--the final course project!\hypertarget{md_part1___r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{Final Project -\/ Description}{Final Project -\/ Description}}\label{md_part1___r_e_a_d_m_e_autotoc_md6}
+
+
+The industry is getting positive buzz as \href{https://en.wikipedia.org/wiki/Nolan_Bushnell}{\texttt{ Nolan Bushnell}} and \href{https://en.wikipedia.org/wiki/Shigeru_Miyamoto}{\texttt{ Shigeru Miyamoto}} have been talking about your game development skills. But dynamics change rapidly in the game industry--you have decided to form a new game studio of your own. From your previous projects, your team has developed a nice codebase with your own intellectual property, and has decided to form a \textquotesingle{}game making\textquotesingle{} studio around this technology. Building an impressive piece of middleware (i.\+e. a tool or technology that is not a game) to showcase at the giant tradeshows (\href{http://east.paxsite.com/}{\texttt{ PAX East}}, \href{https://www.gdconf.com/}{\texttt{ GDC}}, and \href{https://www.e3expo.com/}{\texttt{ E3}}, etc.) is your next task!\hypertarget{md_part1___r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{Final Project}{Final Project}}\label{md_part1___r_e_a_d_m_e_autotoc_md8}
+\hypertarget{md_part1___r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{Game Maker}{Game Maker}}\label{md_part1___r_e_a_d_m_e_autotoc_md9}
+For your final project, you will make a \textquotesingle{}game maker\textquotesingle{}. That is, you will build a data-\/driven tool to generate a game. Your game maker may also incorporate \textquotesingle{}pybind\textquotesingle{} to further enable anyone to use your engine (Note\+: you are allowed to explore other technologies like \href{https://www.lua.org/}{\texttt{ lua}} or \href{https://www.angelcode.com/angelscript/}{\texttt{ Angelscript}}).
+
+With your engine {\bfseries{you will also}} implement either a classic game (that we have not previously implemented (e.\+g. pacman, asteroids, snake, super mario, etc.)) or an original game using your engine to demonstrate how your engine is used.\hypertarget{md_part1___r_e_a_d_m_e_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{Some notes on building a game maker}{Some notes on building a game maker}}\label{md_part1___r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyEnumerate}
+\item Very likely you may need to integrate some GUI library into your system to make it useable.
+\begin{DoxyItemize}
+\item Think about this early--even draw a picture of what you think it should look like.
+\item Think about if this GUI needs to be in a scripting language (e.\+g. Python) or in the C++ code.
+\begin{DoxyItemize}
+\item At the end of the day, you just need a tool that generates data.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item {\itshape Think} data-\/driven
+\begin{DoxyItemize}
+\item This means your C++ handles your engine, and your scripting language should handle the game logic.
+\end{DoxyItemize}
+\item You should be able to utilize many of the game programming patterns discussed in the course with this system. ~\newline
+
+\item You need to implement at least one classic or original game using your game maker that includes \textquotesingle{}3\textquotesingle{} scenes.
+\begin{DoxyItemize}
+\item The game need not span hours, but should at least demonstrate that a game with objectives can be played and won, and new data can be loaded and handled in the engine.
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md_part1___r_e_a_d_m_e_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Examples}{Examples}}\label{md_part1___r_e_a_d_m_e_autotoc_md11}
+See below some example game making tools for inspiration\+:
+
+
+\begin{DoxyItemize}
+\item Look on the left panel to see the API for the Love2D engine\+:
+\begin{DoxyItemize}
+\item \href{https://love2d.org/wiki/Main_Page}{\texttt{ https\+://love2d.\+org/wiki/\+Main\+\_\+\+Page}}
+\end{DoxyItemize}
+\item Look at Gamemakers API for inspiration of what commands are exposed.
+\begin{DoxyItemize}
+\item \href{http://docs2.yoyogames.com/}{\texttt{ http\+://docs2.\+yoyogames.\+com/}}
+\end{DoxyItemize}
+\item Here is an example showing integrating an API (through a console interface) with a script language to make changes and build a game in realtime.
+\begin{DoxyItemize}
+\item \href{https://www.youtube.com/watch?v=b8RyQSvmrEU}{\texttt{ https\+://www.\+youtube.\+com/watch?v=b8\+Ry\+QSvmr\+EU}}
+\end{DoxyItemize}
+\item Here is the GODDOT engine. I would look to Go\+Dot and Game\+Maker as inspiration.
+\begin{DoxyItemize}
+\item \href{https://www.youtube.com/watch?v=5ZuQIbMEjLw}{\texttt{ https\+://www.\+youtube.\+com/watch?v=5\+Zu\+QIb\+MEj\+Lw}}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_part1___r_e_a_d_m_e_autotoc_md17}{}\doxysection{\texorpdfstring{Project Constraints}{Project Constraints}}\label{md_part1___r_e_a_d_m_e_autotoc_md17}
+
+\begin{DoxyEnumerate}
+\item Your must build the majority of your technology.
+\begin{DoxyItemize}
+\item If you use 3rd party code (Say a compression library for example--which would be fine), then cite your source.
+\end{DoxyItemize}
+\item It is expected/permissable that you reuse some code from previous assignments.
+\item 3rd party libraries for a physics engine (e.\+g. Box2D) are okay if you want to incorporate it into the engine.
+\item You cannot build a tech demo with Unity3D, Unreal Engine -- that is not in the spirit of the course, we are building things from scratch.
+\end{DoxyEnumerate}
+
+Note--if you have not taken computer graphics, you should not be attempting to learn 3D graphics during this duration -- I am expecting most engines will be 2D. It is highly recommended (and to some extent expected) that most students will work on 2D projects leveraging their previous codebase. 

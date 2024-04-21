@@ -1,0 +1,30 @@
+\doxysection{Physics\+Help Struct Reference}
+\hypertarget{struct_physics_help}{}\label{struct_physics_help}\index{PhysicsHelp@{PhysicsHelp}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{struct_physics_help_a0a5f9d5892c8467d0fa6dbd947fe0e4a}{Rotate\+Vector}} (float vx, float vy, float angle\+Degrees)
+\item 
+bool \mbox{\hyperlink{struct_physics_help_a61a25118b27650affc7f92eb35fcb708}{Raycast}} (float startX, float startY, float dirX, float dirY, float width, float height, float length, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ $>$ collidables)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_physics_help_a61a25118b27650affc7f92eb35fcb708}\label{struct_physics_help_a61a25118b27650affc7f92eb35fcb708} 
+\index{PhysicsHelp@{PhysicsHelp}!Raycast@{Raycast}}
+\index{Raycast@{Raycast}!PhysicsHelp@{PhysicsHelp}}
+\doxysubsubsection{\texorpdfstring{Raycast()}{Raycast()}}
+{\footnotesize\ttfamily bool Physics\+Help\+::\+Raycast (\begin{DoxyParamCaption}\item[{float}]{startX,  }\item[{float}]{startY,  }\item[{float}]{dirX,  }\item[{float}]{dirY,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{float}]{length,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ $>$}]{collidables }\end{DoxyParamCaption})}
+
+Raycasts from startX, startY in the direction (dirX, dirY) with FRects of size (width,height) for length "{}length"{}. Checks to see collisions with the given list of "{}collidables"{} \Hypertarget{struct_physics_help_a0a5f9d5892c8467d0fa6dbd947fe0e4a}\label{struct_physics_help_a0a5f9d5892c8467d0fa6dbd947fe0e4a} 
+\index{PhysicsHelp@{PhysicsHelp}!RotateVector@{RotateVector}}
+\index{RotateVector@{RotateVector}!PhysicsHelp@{PhysicsHelp}}
+\doxysubsubsection{\texorpdfstring{RotateVector()}{RotateVector()}}
+{\footnotesize\ttfamily std\+::pair$<$ float, float $>$ Physics\+Help\+::\+Rotate\+Vector (\begin{DoxyParamCaption}\item[{float}]{vx,  }\item[{float}]{vy,  }\item[{float}]{angle\+Degrees }\end{DoxyParamCaption})}
+
+Rotate vector v by angle degrees 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/include/Physics\+Help.\+hpp\item 
+Engine/src/Physics\+Help.\+cpp\end{DoxyCompactItemize}

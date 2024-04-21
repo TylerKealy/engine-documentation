@@ -1,0 +1,105 @@
+\doxysection{Application Struct Reference}
+\hypertarget{struct_application}{}\label{struct_application}\index{Application@{Application}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_application_af4c064f2de49d85721d090a11b35a27c}{Application}} (std\+::string scene\+\_\+json)
+\item 
+void \mbox{\hyperlink{struct_application_aecc3c84818aa8da9ef311177ddca1d49}{Start\+Up}} (std\+::string scene\+\_\+json)
+\item 
+void \mbox{\hyperlink{struct_application_a817892cf56c1c333d53be31e73e8c2f8}{Shutdown}} ()
+\item 
+void \mbox{\hyperlink{struct_application_aef425d5f9773014e73262c05c8f8b0ea}{Input}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{struct_application_acdac3e501d813a5316b5c3f620157235}{Update}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{struct_application_a6f40ffdb97f3a938ae19ea4eae4882ed}{Render}} ()
+\item 
+void \mbox{\hyperlink{struct_application_add8435e8cede1ab06a59cdc220ea394c}{Loop}} (float target\+FPS)
+\item 
+void \mbox{\hyperlink{struct_application_a272b0ed36408a51cefa24a59ebd927dc}{Delay}} (int milliseconds)
+\item 
+bool \mbox{\hyperlink{struct_application_afdf03c4a34aaad09e9babe4ec7ede415}{Poll}} ()
+\item 
+\mbox{\hyperlink{struct_scene}{Scene}} \mbox{\hyperlink{struct_application_ae00d29add23d1764e85789d338f00522}{Get\+Scene}} ()
+\item 
+void \mbox{\hyperlink{struct_application_af3be84928d78813c8019956aad51047f}{Load\+Scene}} (std\+::string path\+\_\+to\+\_\+json)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_application_af4c064f2de49d85721d090a11b35a27c}\label{struct_application_af4c064f2de49d85721d090a11b35a27c} 
+\index{Application@{Application}!Application@{Application}}
+\index{Application@{Application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily Application\+::\+Application (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+\_\+json }\end{DoxyParamCaption})}
+
+Starts up \doxylink{struct_application}{Application} with given scene. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_application_a272b0ed36408a51cefa24a59ebd927dc}\label{struct_application_a272b0ed36408a51cefa24a59ebd927dc} 
+\index{Application@{Application}!Delay@{Delay}}
+\index{Delay@{Delay}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Delay()}{Delay()}}
+{\footnotesize\ttfamily void Application\+::\+Delay (\begin{DoxyParamCaption}\item[{int}]{milliseconds }\end{DoxyParamCaption})}
+
+Delays method by "{}milliseconds"{} ms through SDL\+\_\+\+Delay \Hypertarget{struct_application_ae00d29add23d1764e85789d338f00522}\label{struct_application_ae00d29add23d1764e85789d338f00522} 
+\index{Application@{Application}!GetScene@{GetScene}}
+\index{GetScene@{GetScene}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{GetScene()}{GetScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_scene}{Scene}} Application\+::\+Get\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns currently loaded scene. \Hypertarget{struct_application_aef425d5f9773014e73262c05c8f8b0ea}\label{struct_application_aef425d5f9773014e73262c05c8f8b0ea} 
+\index{Application@{Application}!Input@{Input}}
+\index{Input@{Input}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void Application\+::\+Input (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+Currently unused. \Hypertarget{struct_application_af3be84928d78813c8019956aad51047f}\label{struct_application_af3be84928d78813c8019956aad51047f} 
+\index{Application@{Application}!LoadScene@{LoadScene}}
+\index{LoadScene@{LoadScene}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{LoadScene()}{LoadScene()}}
+{\footnotesize\ttfamily void Application\+::\+Load\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{path\+\_\+to\+\_\+json }\end{DoxyParamCaption})}
+
+Loads scene of the given json path \Hypertarget{struct_application_add8435e8cede1ab06a59cdc220ea394c}\label{struct_application_add8435e8cede1ab06a59cdc220ea394c} 
+\index{Application@{Application}!Loop@{Loop}}
+\index{Loop@{Loop}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Loop()}{Loop()}}
+{\footnotesize\ttfamily void Application\+::\+Loop (\begin{DoxyParamCaption}\item[{float}]{target\+FPS }\end{DoxyParamCaption})}
+
+Currently unused. \Hypertarget{struct_application_afdf03c4a34aaad09e9babe4ec7ede415}\label{struct_application_afdf03c4a34aaad09e9babe4ec7ede415} 
+\index{Application@{Application}!Poll@{Poll}}
+\index{Poll@{Poll}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Poll()}{Poll()}}
+{\footnotesize\ttfamily bool Application\+::\+Poll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Keeps game ticking and checks for Exit input. \Hypertarget{struct_application_a6f40ffdb97f3a938ae19ea4eae4882ed}\label{struct_application_a6f40ffdb97f3a938ae19ea4eae4882ed} 
+\index{Application@{Application}!Render@{Render}}
+\index{Render@{Render}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Application\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Renders currently loaded scene. \Hypertarget{struct_application_a817892cf56c1c333d53be31e73e8c2f8}\label{struct_application_a817892cf56c1c333d53be31e73e8c2f8} 
+\index{Application@{Application}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Application\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys window and quits SDL. \Hypertarget{struct_application_aecc3c84818aa8da9ef311177ddca1d49}\label{struct_application_aecc3c84818aa8da9ef311177ddca1d49} 
+\index{Application@{Application}!StartUp@{StartUp}}
+\index{StartUp@{StartUp}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{StartUp()}{StartUp()}}
+{\footnotesize\ttfamily void Application\+::\+Start\+Up (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+\_\+json }\end{DoxyParamCaption})}
+
+Initializes SDL and loads up scene. \Hypertarget{struct_application_acdac3e501d813a5316b5c3f620157235}\label{struct_application_acdac3e501d813a5316b5c3f620157235} 
+\index{Application@{Application}!Update@{Update}}
+\index{Update@{Update}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Application\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+Updates currently loaded scene. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/include/Application.\+hpp\item 
+Engine/src/Application.\+cpp\end{DoxyCompactItemize}

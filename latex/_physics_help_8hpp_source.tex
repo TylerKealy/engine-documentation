@@ -1,0 +1,24 @@
+\doxysection{Physics\+Help.\+hpp}
+\hypertarget{_physics_help_8hpp_source}{}\label{_physics_help_8hpp_source}\index{Engine/include/PhysicsHelp.hpp@{Engine/include/PhysicsHelp.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#\ define\ M\_PI\ \ \ \ \ \ \ \ \ \ \ 3.14159265358979323846\ \ }\textcolor{comment}{/*\ pi\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameEntity.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Collision2DComponent.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_physics_help}{PhysicsHelp}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{struct_physics_help}{PhysicsHelp}}();}
+\DoxyCodeLine{00015\ \ \ \ \ std::pair<float,\ float>\ \mbox{\hyperlink{struct_physics_help_a0a5f9d5892c8467d0fa6dbd947fe0e4a}{RotateVector}}(\textcolor{keywordtype}{float}\ vx,\ \textcolor{keywordtype}{float}\ vy,\ \textcolor{keywordtype}{float}\ angleDegrees);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_physics_help_a61a25118b27650affc7f92eb35fcb708}{Raycast}}(\textcolor{keywordtype}{float}\ startX,\ \textcolor{keywordtype}{float}\ startY,\ \textcolor{keywordtype}{float}\ dirX,\ \textcolor{keywordtype}{float}\ dirY,\ \textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height,\ \textcolor{keywordtype}{float}\ length,\ std::vector<std::shared\_ptr<GameEntity>>\ collidables);}
+\DoxyCodeLine{00017\ \ \ }
+\DoxyCodeLine{00018\ \};}
+
+\end{DoxyCode}

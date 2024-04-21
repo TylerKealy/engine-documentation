@@ -1,0 +1,33 @@
+\doxysection{Input\+Component.\+hpp}
+\hypertarget{_input_component_8hpp_source}{}\label{_input_component_8hpp_source}\index{Engine/include/InputComponent.hpp@{Engine/include/InputComponent.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}InputDir.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_input_component}{InputComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_component}{Component}}\{}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{struct_input_component}{InputComponent}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{struct_input_component}{\string~InputComponent}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ ComponentType\ GetType()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ Input(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ Render(SDL\_Renderer*\ renderer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_input_component_a11503062415e5c482ec9f77b2d2599dd}{GetInput}}(InputDir\ input);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ mSpeed\{150.0f\};}
+\DoxyCodeLine{00027\ \};}
+
+\end{DoxyCode}

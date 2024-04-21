@@ -1,0 +1,93 @@
+\doxysection{Scene Struct Reference}
+\hypertarget{struct_scene}{}\label{struct_scene}\index{Scene@{Scene}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_scene_a13bf3594c9b47d8af86fb7e333f76d25}{Start\+Up}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, std\+::string scene\+\_\+json)
+\item 
+\Hypertarget{struct_scene_aea860520f1ae70e9af3e0fffa7357837}\label{struct_scene_aea860520f1ae70e9af3e0fffa7357837} 
+void {\bfseries Shutdown} ()
+\item 
+\Hypertarget{struct_scene_ae0faba71fd397e2bea5849784ee3d2fe}\label{struct_scene_ae0faba71fd397e2bea5849784ee3d2fe} 
+void {\bfseries Input} (float delta\+Time)
+\item 
+\Hypertarget{struct_scene_a7e2bf79699b0c05bd353fade7b380ad7}\label{struct_scene_a7e2bf79699b0c05bd353fade7b380ad7} 
+void {\bfseries Update} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{struct_scene_a91913b921d41d374e00eac347358dc14}{Render}} ()
+\item 
+void \mbox{\hyperlink{struct_scene_afee9735168aa0a95751dbec42fa15d59}{Set\+Scene\+Active\+Status}} (bool status)
+\item 
+bool \mbox{\hyperlink{struct_scene_a99313203ab62b1692065d9780e0cd067}{Is\+Scene\+Active}} () const
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ $>$ \mbox{\hyperlink{struct_scene_aadc8019eb1d1a1bfe90b676d079a6f7b}{Get\+Entites\+Of\+Tag}} (std\+::string tag)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ $>$ \mbox{\hyperlink{struct_scene_a372cfa557db3c0e36401580f8b861297}{Get\+All\+Entities}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{struct_scene_a32df34fcf1d9a5839782084203184924}{Get\+Player}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{struct_scene_ad1366d0a487d8761df3a27b5784dfa52}{Instantiate}} (float x, float y, std\+::string texture\+\_\+path, std\+::string tag)
+\item 
+\Hypertarget{struct_scene_a145410d5ba661f1bcdc848b97957c781}\label{struct_scene_a145410d5ba661f1bcdc848b97957c781} 
+bool {\bfseries Raycast} (float startX, float startY, float dirX, float dirY, float width, float height, float length, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ $>$ collidables)
+\item 
+\Hypertarget{struct_scene_a5c75c9f1d7194c6396f7004784192702}\label{struct_scene_a5c75c9f1d7194c6396f7004784192702} 
+std\+::pair$<$ float, float $>$ {\bfseries Rotate\+Vector} (float vx, float vy, float angle\+Degrees)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_scene_a372cfa557db3c0e36401580f8b861297}\label{struct_scene_a372cfa557db3c0e36401580f8b861297} 
+\index{Scene@{Scene}!GetAllEntities@{GetAllEntities}}
+\index{GetAllEntities@{GetAllEntities}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{GetAllEntities()}{GetAllEntities()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ $>$ Scene\+::\+Get\+All\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns all renderable entites. \Hypertarget{struct_scene_aadc8019eb1d1a1bfe90b676d079a6f7b}\label{struct_scene_aadc8019eb1d1a1bfe90b676d079a6f7b} 
+\index{Scene@{Scene}!GetEntitesOfTag@{GetEntitesOfTag}}
+\index{GetEntitesOfTag@{GetEntitesOfTag}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{GetEntitesOfTag()}{GetEntitesOfTag()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ $>$ Scene\+::\+Get\+Entites\+Of\+Tag (\begin{DoxyParamCaption}\item[{std\+::string}]{tag }\end{DoxyParamCaption})}
+
+Returns all entities with given tag. \Hypertarget{struct_scene_a32df34fcf1d9a5839782084203184924}\label{struct_scene_a32df34fcf1d9a5839782084203184924} 
+\index{Scene@{Scene}!GetPlayer@{GetPlayer}}
+\index{GetPlayer@{GetPlayer}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{GetPlayer()}{GetPlayer()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ Scene\+::\+Get\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns player \doxylink{struct_game_entity}{Game\+Entity} (\doxylink{struct_game_entity}{Game\+Entity} with player tag) \Hypertarget{struct_scene_ad1366d0a487d8761df3a27b5784dfa52}\label{struct_scene_ad1366d0a487d8761df3a27b5784dfa52} 
+\index{Scene@{Scene}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ Scene\+::\+Instantiate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{std\+::string}]{texture\+\_\+path,  }\item[{std\+::string}]{tag }\end{DoxyParamCaption})}
+
+Creates a new \doxylink{struct_game_entity}{Game\+Entity} at position (x,y) with texture loaded from texture\+\_\+path and a given tag. \Hypertarget{struct_scene_a99313203ab62b1692065d9780e0cd067}\label{struct_scene_a99313203ab62b1692065d9780e0cd067} 
+\index{Scene@{Scene}!IsSceneActive@{IsSceneActive}}
+\index{IsSceneActive@{IsSceneActive}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{IsSceneActive()}{IsSceneActive()}}
+{\footnotesize\ttfamily bool Scene\+::\+Is\+Scene\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns whether scene is active or not. \Hypertarget{struct_scene_a91913b921d41d374e00eac347358dc14}\label{struct_scene_a91913b921d41d374e00eac347358dc14} 
+\index{Scene@{Scene}!Render@{Render}}
+\index{Render@{Render}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Scene\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Redners each of its game entities and the bakground of the window. \Hypertarget{struct_scene_afee9735168aa0a95751dbec42fa15d59}\label{struct_scene_afee9735168aa0a95751dbec42fa15d59} 
+\index{Scene@{Scene}!SetSceneActiveStatus@{SetSceneActiveStatus}}
+\index{SetSceneActiveStatus@{SetSceneActiveStatus}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{SetSceneActiveStatus()}{SetSceneActiveStatus()}}
+{\footnotesize\ttfamily void Scene\+::\+Set\+Scene\+Active\+Status (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+Sets scene active or not. \Hypertarget{struct_scene_a13bf3594c9b47d8af86fb7e333f76d25}\label{struct_scene_a13bf3594c9b47d8af86fb7e333f76d25} 
+\index{Scene@{Scene}!StartUp@{StartUp}}
+\index{StartUp@{StartUp}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{StartUp()}{StartUp()}}
+{\footnotesize\ttfamily void Scene\+::\+Start\+Up (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{std\+::string}]{scene\+\_\+json }\end{DoxyParamCaption})}
+
+Starts up scene and loads all the game entities from given json file. Initializes components of all entities etc. NOTE\+: Can add error handling...
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/include/Scene.\+hpp\item 
+Engine/src/Scene.\+cpp\end{DoxyCompactItemize}

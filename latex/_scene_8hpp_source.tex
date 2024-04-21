@@ -1,0 +1,55 @@
+\doxysection{Scene.\+hpp}
+\hypertarget{_scene_8hpp_source}{}\label{_scene_8hpp_source}\index{Engine/include/Scene.hpp@{Engine/include/Scene.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Scene.hpp}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}json.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}GameEntity.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}ComponentType.hpp"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }json\ =\ nlohmann::json;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_scene}{Scene}}\{}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{struct_scene}{Scene}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{struct_scene}{\string~Scene}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_a13bf3594c9b47d8af86fb7e333f76d25}{StartUp}}(SDL\_Renderer\ *renderer,\ std::string\ scene\_json);\ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ Shutdown();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ Input(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_a91913b921d41d374e00eac347358dc14}{Render}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_afee9735168aa0a95751dbec42fa15d59}{SetSceneActiveStatus}}(\textcolor{keywordtype}{bool}\ status);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_scene_a99313203ab62b1692065d9780e0cd067}{IsSceneActive}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ std::vector<std::shared\_ptr<GameEntity>>\ \mbox{\hyperlink{struct_scene_aadc8019eb1d1a1bfe90b676d079a6f7b}{GetEntitesOfTag}}(std::string\ tag);}
+\DoxyCodeLine{00031\ \ \ \ \ std::vector<std::shared\_ptr<GameEntity>>\ \mbox{\hyperlink{struct_scene_a372cfa557db3c0e36401580f8b861297}{GetAllEntities}}();}
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<GameEntity>\ \mbox{\hyperlink{struct_scene_a32df34fcf1d9a5839782084203184924}{GetPlayer}}();}
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<GameEntity>\ \mbox{\hyperlink{struct_scene_ad1366d0a487d8761df3a27b5784dfa52}{Instantiate}}(\textcolor{keywordtype}{float}\ x,\textcolor{keywordtype}{float}\ y,\ std::string\ texture\_path,\ std::string\ tag);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ Raycast(\textcolor{keywordtype}{float}\ startX,\ \textcolor{keywordtype}{float}\ startY,\ \textcolor{keywordtype}{float}\ dirX,\ \textcolor{keywordtype}{float}\ dirY,\ \textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height,\ \textcolor{keywordtype}{float}\ length,\ std::vector<std::shared\_ptr<GameEntity>>\ collidables);}
+\DoxyCodeLine{00035\ \ \ \ \ std::pair<float,\ float>\ RotateVector(\textcolor{keywordtype}{float}\ vx,\ \textcolor{keywordtype}{float}\ vy,\ \textcolor{keywordtype}{float}\ angleDegrees);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enemy\ sprites}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<GameEntity>>\ game\_entities;\ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Main\ Character}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ std::shared\_ptr<GameEntity>\ mPlayer;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ mPoints\{0.0f\};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mSceneIsActive\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ SDL\_Renderer*\ mRenderer;}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+
+\end{DoxyCode}
